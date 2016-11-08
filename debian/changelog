@@ -1,3 +1,9 @@
+debian-installer (20160630pardus2) pardus; urgency=medium
+
+  * Update drone file in order to change docker image
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 08 Nov 2016 18:03:00 +0300
+
 debian-installer (20160630pardus1) pardus; urgency=medium
 
   * Add .drone.yml
