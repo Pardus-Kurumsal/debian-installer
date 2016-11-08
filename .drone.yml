@@ -1,6 +1,6 @@
 build:
   package:
-    image: pardus/pardus-package
+    image: pardus/pardus-devel
     volumes:
       - /tmp/packages:/packages
     commands:
