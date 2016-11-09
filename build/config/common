@@ -36,7 +36,7 @@ MKLIBS = mklibs-copy
 # Normally the sources.list for building d-i will be derived from your
 # "normal" sources.list. However, you can specify a mirror here to override
 # this. You can use copy:/ to use a local mirror
-#MIRROR = http://www.us.debian.org/debian
+MIRROR = http://10.10.20.13:33333/pardus
 
 # Options to pass to dpkg when it is unpacking the udebs to create the
 # image. None should be needed, but --force-overwrite might need to be
@@ -44,18 +44,18 @@ MKLIBS = mklibs-copy
 DPKG_UNPACK_OPTIONS = --force-overwrite
 
 # The codename of the Debian release that should be installed by default.
-DEBIAN_RELEASE = stretch
+DEBIAN_RELEASE = $(USE_UDEBS_FROM)
 
 # The version (number and codename) of the Debian release targeted by the
 # installation images. (Only the codename is used while the version number
 # has not yet been determined.)
-DEBIAN_VERSION = 9 (stretch)
+DEBIAN_VERSION = 16.10 (pardus-devel)
 DEBIAN_VERSION ?= stretch
 
 # Define here from what release (codename!) components (udebs) should be taken
 # to build debian-installer. By default this is set to 'unstable' for building
 # daily images. For official builds this is overruled in debian/rules.
-USE_UDEBS_FROM ?= unstable
+USE_UDEBS_FROM ?= pardus-devel
 
 # Archive components from which to fetch debian-installer modules.
 UDEB_COMPONENTS ?= main/debian-installer
@@ -90,13 +90,13 @@ TYPE = $(MEDIUM)
 
 # Used to write a /etc/lsb-release file in the installer initrd.
 LSB_DISTRIB_ID=Debian
-LSB_DISTRIB_DESCRIPTION="Debian $(shell uname -o) installer"
+LSB_DISTRIB_DESCRIPTION="Pardus $(shell uname -o) installer"
 # Inlude the build date of the installer in here.
 LSB_DISTRIB_RELEASE="$(DEBIAN_VERSION) - installer build $(BUILD_DATE)"
 
 # This keyring is only used to verify udeb downloads using apt. Since the
 # build process does not run as root, apt cannot read /etc/apt/trusted.gpg.
-KEYRING=/usr/share/keyrings/debian-archive-keyring.gpg
+KEYRING=/usr/share/keyrings/pardus-archive-keyring.gpg
 
 # All images that include cdebconf should include symbols needed by these
 # plugins.
