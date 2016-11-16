@@ -1,3 +1,9 @@
+debian-installer (20160630pardus6) pardus; urgency=medium
+
+  * Change kernel version 4.7.0-1 -> 4.8.0-1
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Wed, 16 Nov 2016 15:51:35 +0300
+
 debian-installer (20160630pardus5) pardus; urgency=medium
 
   * Change docker image in .drone.yml
