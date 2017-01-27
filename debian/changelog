@@ -1,3 +1,131 @@
+debian-installer (20170127) unstable; urgency=medium
+
+  [ Cyril Brulebois ]
+  * Bump Linux kernel version from 4.8.0-2 to 4.9.0-1.
+  * Update translation-status for the release.
+
+  [ Martin Michlmayr ]
+  * Drop armel/versatile flavour since kernel support was removed.
+
+  [ Aurelien Jarno ]
+  * Also copy *.so files in udeblibs (Closes: #851790).
+  * mips*: install all NIC modules in the netbood initrd.
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 27 Jan 2017 23:23:37 +0100
+
+debian-installer (20170112) unstable; urgency=medium
+
+  [ Cyril Brulebois ]
+  * Bump Linux kernel version from 4.7.0-1 to 4.8.0-1.
+  * Add “set -e;” before while loops in a few arm* config files
+    to make sure errors are reported (Closes: #843916).
+  * Revert the following workaround after changes in grub2 2.02~beta3:
+    config/kfreebsd.cfg: Put xorriso's -J flag after “--” to work around
+    grub-mkrescue's change in option handling (See: #741656).
+  * Exclude libssl1.1-udeb as well for qnap, wget will likely depend on
+    it later on.
+  * Update translation-status for the release.
+
+  [ Adam Conrad ]
+  * build/util/efi-image: Fix up FAT filesystem size calculation:
+    - We appear to need 32k headroom, not 24k; this was masked
+      by rounding errors and blind luck until grub grew 1.5kB.
+    - Break out the magic headroom number into 32+31 to match
+      the comment and make the arithmetic more obvious to read.
+    - Round file sizes up, not down, so we don't break in future.
+
+  [ Martin Michlmayr ]
+  * Disable u-boot images for OpenRD because they've been removed
+    (see #837629).
+  * Exclude wpasupplicant-udeb on orion5x-qnap because it brings in
+    libcrypto1.1-udeb.
+
+  [ Aurélien COUDERC ]
+  * Update theme to Soft Waves by Juliette Belin.
+
+  [ Christian Perrier ]
+  * Replace fonts-lklug-sinhala by fonts-noto-hinted-udeb for Sinhala.
+    Closes: #837926
+
+  [ Cyril Brulebois ]
+  * Bump Linux kernel version from 4.8.0-1 to 4.8.0-2.
+
+  [ Philipp Kern ]
+  * Add https support to the installer. (Closes: #842040)
+
+  [ Philip Hands ]
+  * pkg-lists/gtk-common: ttf-dejavu-udeb is now called fonts-dejavu-udeb
+
+  [ Samuel Thibault ]
+  * Bump gnumach kernel version.
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 12 Jan 2017 11:08:53 +0100
+
+debian-installer (20161031) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * x86-image: Fix -p parameter value.
+
+  [ Cyril Brulebois ]
+  * Fix Built-Using generation: the Source field of a binary package can
+    contain a version between parentheses. So let's use that if it's
+    present, instead of picking the binary version in all cases. This
+    should fix the REJECT from ftp-master due to unknown packages.
+  * Since linux code comes from src:linux (instead of src:linux-signed),
+    add a test on the latter to use linux and the package's version in
+    this specific case. That won't account for a possible linux binNMU,
+    but that should be enough for most cases. We might implement looking
+    up Built-Using inside udebs, and get such a field added for
+    kernel-image packages, to get the right linux source version.
+
+ -- Cyril Brulebois <kibi@debian.org>  Mon, 31 Oct 2016 17:07:06 +0100
+
+debian-installer (20161027) unstable; urgency=medium
+
+  [ Roger Shimizu ]
+  * Add generic GNU/screen support, except gtk installer.
+    So screen is started by default except running in gtk mode.
+
+  [ Martin Michlmayr ]
+  * Exclude dependency of screen-udeb on orion5x image.
+  * Reduce size of orion5x image for QNAP to fit in flash:
+    - Split orion5x into orion5x and orion5x-qnap.  This is based on
+      work done by Roger Shimizu.
+    - Exclude the text frontend.
+  * HP mv2120: Move kernel load address higher (see #809611 for
+    background).
+  * Add firmware.none.img on armhf (hd-media and netboot) to allow the
+    creation of generic SD cards.
+
+  [ Adam Conrad ]
+  * build/Makefile: Don't strip modules; this removes sigs (LP: #1604441)
+
+  [ Aurelien Jarno ]
+  * Install stretch instead of sid on mips64el now that it is
+    debootstrappable.
+
+  [ Samuel Thibault ]
+  * Add gail and atk udebs for graphical accessibility.
+  * x86-image: Pass -p parameter to grub-mkimage which now requires it.
+
+  [ Steven Chamberlain ]
+  * Increase kfreebsd-amd64 MFSROOT to 74 MiB to allow for the new udebs
+
+  [ Vagrant Cascadian ]
+  * Update u-boot targets for BeagleBoard-X15 and Firefly-RK3288 to use
+    files without the -dtb suffix, which was obsoleted in u-boot 2016.09.
+  * Add support for the orangepi_plus.
+
+  [ Cyril Brulebois ]
+  * Bump Linux kernel version from 4.6.0-1 to 4.7.0-1.
+  * Update translation-status for the release.
+
+  [ dann frazier ]
+  * arm64: cdrom: Configure GRUB to load the gzio module, adding support
+    for compressed kernels (LP: #1632473).
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 27 Oct 2016 22:09:07 +0200
+
 debian-installer (20160630) unstable; urgency=medium
 
   [ Cyril Brulebois ]
