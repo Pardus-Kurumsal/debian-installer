@@ -36,7 +36,7 @@ MKLIBS = mklibs-copy
 # Normally the sources.list for building d-i will be derived from your
 # "normal" sources.list. However, you can specify a mirror here to override
 # this. You can use copy:/ to use a local mirror
-MIRROR = http://10.10.20.13:33333/pardus
+MIRROR = http://161.9.194.174:33333/pardus
 
 # Options to pass to dpkg when it is unpacking the udebs to create the
 # image. None should be needed, but --force-overwrite might need to be
