@@ -1,3 +1,9 @@
+debian-installer (20160630pardus7) pardus; urgency=medium
+
+  * Change mirror Ip address
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Wed, 08 Feb 2017 16:20:03 +0300
+
 debian-installer (20160630pardus6) pardus; urgency=medium
 
   * Change kernel version 4.7.0-1 -> 4.8.0-1
