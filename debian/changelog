@@ -1,3 +1,9 @@
+debian-installer (20170127pardus2) pardus; urgency=medium
+
+  * Change mirror Ip into a domain name
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 21 Feb 2017 16:57:45 +0300
+
 debian-installer (20170127pardus1) pardus; urgency=medium
 
   [ Gökhan Karabulut ]
