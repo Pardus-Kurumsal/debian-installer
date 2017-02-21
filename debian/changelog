@@ -1,3 +1,22 @@
+debian-installer (20170127pardus1) pardus; urgency=medium
+
+  [ Gökhan Karabulut ]
+  * Add .drone.yml
+
+  [ Yunusemre Şentürk ]
+  * Update drone file in order to change docker image
+
+  [ Gökhan Karabulut ]
+  * Modify build/config/common for Pardus
+  * Fix rules for pardus-devel
+
+  [ Yunusemre Şentürk ]
+  * Change docker image in .drone.yml
+  * Change mirror Ip address
+  * Import debian version 20170127
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 21 Feb 2017 09:48:41 +0300
+
 debian-installer (20170127) unstable; urgency=medium
 
   [ Cyril Brulebois ]
