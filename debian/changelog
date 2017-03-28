@@ -1,3 +1,9 @@
+debian-installer (20170127pardus3) pardus; urgency=medium
+
+  * Change kernel version 4.9.0-1 --> 4.9.0-2
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 28 Mar 2017 16:03:22 +0300
+
 debian-installer (20170127pardus2) pardus; urgency=medium
 
   * Change mirror Ip into a domain name
