@@ -49,13 +49,13 @@ DEBIAN_RELEASE = $(USE_UDEBS_FROM)
 # The version (number and codename) of the Debian release targeted by the
 # installation images. (Only the codename is used while the version number
 # has not yet been determined.)
-DEBIAN_VERSION = 16.10 (pardus-devel)
+DEBIAN_VERSION = 16.10 (onyedi)
 DEBIAN_VERSION ?= stretch
 
 # Define here from what release (codename!) components (udebs) should be taken
 # to build debian-installer. By default this is set to 'unstable' for building
 # daily images. For official builds this is overruled in debian/rules.
-USE_UDEBS_FROM ?= pardus-devel
+USE_UDEBS_FROM ?= onyedi
 
 # Archive components from which to fetch debian-installer modules.
 UDEB_COMPONENTS ?= main/debian-installer
