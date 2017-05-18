@@ -1,3 +1,9 @@
+debian-installer (20170127pardus5) onyedi; urgency=medium
+
+  * Change kernel version 4.9.0-2 --> 4.9.0-3
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Thu, 18 May 2017 09:50:18 +0300
+
 debian-installer (20170127pardus4) onyedi; urgency=medium
 
   * Make default suite pardus-devel --> onyedi
