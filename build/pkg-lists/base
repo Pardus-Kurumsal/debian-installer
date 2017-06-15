@@ -17,6 +17,9 @@ udpkg
 rescue-check
 env-preseed
 pciutils-udeb
+screen-udeb
+wget-udeb
+ca-certificates-udeb
 
 #include "udev"
 

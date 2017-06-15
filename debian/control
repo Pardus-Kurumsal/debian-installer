@@ -95,10 +95,12 @@ Build-Depends:
 	pxelinux [i386 amd64],
 	syslinux-common (>= 3:6) [i386 amd64],
 #		With isohybrid.
-	yaboot [powerpc],
+	yaboot [powerpc ppc64],
 #		For all our powerpc boot needs. Well, not really.
 	aboot (>= 0.9b-2) [alpha],
 #		A previous version didn't have netabootwrap.
+	palo [hppa],
+#		Bootloader for hppa machines, to make netboot images.
 	silo [sparc sparc64],
 #		Using silo is problematic since it needs to run as root,
 #		so images that need it are not built by default, but we
@@ -125,9 +127,9 @@ Build-Depends:
 	grub-ieee1275-bin [ppc64el],
 #		IEEE1275 bootloader support.
 	u-boot-imx [armhf],
-	u-boot-omap [armhf],
+	u-boot-omap (>= 2016.09~rc1) [armhf],
 	u-boot-sunxi [armhf],
-	u-boot-rockchip [armhf],
+	u-boot-rockchip (>= 2016.09~rc1) [armhf],
 #		U-boot binaries for armhf systems without u-boot in flash memory
 	u-boot (>= 2016.01+dfsg1-1~) [armel],
 #		U-boot binaries for armel systems
@@ -146,7 +148,7 @@ Build-Depends:
 	bf-utf-source [!s390 !s390x],
 #		Contains the unicode font we use. Not a udeb since we
 #		perform font reduction at build time.
-	mkvmlinuz [powerpc],
+	mkvmlinuz [powerpc ppc64],
 #		Used to make powerpc images that can boot direct from
 #		firmware w/o using a boot loader.
 	openssl,
