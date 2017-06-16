@@ -149,7 +149,7 @@ ifeq ($(DEB_HOST_ARCH),kfreebsd-i386)
 MFSROOT_LIMIT := 42m
 else ifeq ($(DEB_HOST_ARCH),kfreebsd-amd64)
 # See Bug#783773 for derivation.
-MFSROOT_LIMIT := 74m
+MFSROOT_LIMIT := 78m
 endif
 
 define mkfs.ufs1
@@ -643,8 +643,14 @@ sources.list.udeb:
 	echo "deb [trusted=yes] copy:$(shell pwd)/ $(LOCALUDEBDIR)/"; \
 	if [ "$(MIRROR)x" != "x" ]; then \
 		echo "deb $(MIRROR) $(USE_UDEBS_FROM) $(UDEB_COMPONENTS)"; \
+		if [ "$(USE_UNRELEASED)" = 1 ]; then \
+			echo "deb $(MIRROR) unreleased $(UDEB_COMPONENTS)"; \
+		fi \
 	else \
 		gen-sources.list.udeb "$(SYSTEM_SOURCES_LIST)" $(USE_UDEBS_FROM) $(UDEB_COMPONENTS) $(USE_PROPOSED_UPDATES); \
+		if [ "$(USE_UNRELEASED)" = 1 ]; then \
+			gen-sources.list.udeb "$(SYSTEM_SOURCES_LIST)" unreleased $(UDEB_COMPONENTS); \
+		fi \
 	fi) > $@
 	@if [ -e $@.local ]; then \
 		echo "Using $@.local:"; \
