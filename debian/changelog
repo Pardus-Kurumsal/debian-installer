@@ -1,3 +1,23 @@
+debian-installer (20170615pardus1) onyedi; urgency=medium
+
+  [ Gökhan Karabulut ]
+  * Add .drone.yml
+
+  [ Yunusemre Şentürk ]
+  * Update drone file in order to change docker image
+
+  [ Gökhan Karabulut ]
+  * Modify build/config/common for Pardus
+  * Fix rules for pardus-devel
+
+  [ Yunusemre Şentürk ]
+  * Change docker image in .drone.yml
+  * Change mirror Ip address
+  * Change mirror Ip into a domain name
+  * Make default suite pardus-devel --> onyedi
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Fri, 16 Jun 2017 10:00:26 +0300
+
 debian-installer (20170615) unstable; urgency=medium
 
   [ Karsten Merker ]
