@@ -1,3 +1,9 @@
+debian-installer (20170615pardus2) onyedi; urgency=medium
+
+  * Update Kernel ABI version
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Mon, 09 Oct 2017 15:17:01 +0300
+
 debian-installer (20170615pardus1) onyedi; urgency=medium
 
   [ Gökhan Karabulut ]
