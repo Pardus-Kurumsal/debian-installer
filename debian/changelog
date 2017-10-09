@@ -1,3 +1,9 @@
+debian-installer (20170615pardus3) onyedi; urgency=medium
+
+  * Update control file
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Mon, 09 Oct 2017 17:10:04 +0300
+
 debian-installer (20170615pardus2) onyedi; urgency=medium
 
   * Update Kernel ABI version
