@@ -1,3 +1,9 @@
+debian-installer (20170615pardus4) onyedi; urgency=medium
+
+  * Change kernel version 4.9.0-4 --> 4.9.0-6
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 06 Mar 2018 11:18:10 +0300
+
 debian-installer (20170615pardus3) onyedi; urgency=medium
 
   * Update control file
