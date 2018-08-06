@@ -1,3 +1,13 @@
+debian-installer (20170615pardus5) onyedi; urgency=medium
+
+  [ Cihangir Akturk ]
+  * ci: change artifact location to /packages
+
+  [ Yunusemre Şentürk ]
+  * Change kernel version 4.9.0-6 --> 4.9.0-7
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Mon, 06 Aug 2018 17:07:40 +0300
+
 debian-installer (20170615pardus4) onyedi; urgency=medium
 
   * Change kernel version 4.9.0-4 --> 4.9.0-6
