@@ -21,6 +21,9 @@ screen-udeb
 wget-udeb
 ca-certificates-udeb
 
+debootstrap-udeb
+pardus-archive-keyring-udeb
+
 #include "udev"
 
 libkmod2-udeb [linux]
