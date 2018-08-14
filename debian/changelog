@@ -1,3 +1,10 @@
+debian-installer (20170615pardus6) onyedi; urgency=medium
+
+  * Add debootstrap and pardus-archive-keyring udebs in base package list for netboot
+  * Change isolinux splash pictures to Pardus default
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 14 Aug 2018 16:27:53 +0300
+
 debian-installer (20170615pardus5) onyedi; urgency=medium
 
   [ Cihangir Akturk ]
