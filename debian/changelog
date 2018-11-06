@@ -1,3 +1,9 @@
+debian-installer (20170615pardus7) onyedi; urgency=medium
+
+  * Change kernel version 4.9.0-7 --> 4.9.0-8
+
+ -- Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>  Tue, 06 Nov 2018 14:40:14 +0300
+
 debian-installer (20170615pardus6) onyedi; urgency=medium
 
   * Add debootstrap and pardus-archive-keyring udebs in base package list for netboot
